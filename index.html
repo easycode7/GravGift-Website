@@ -7,6 +7,7 @@
     <title>GravGift</title>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="css/loadscreen.css">
+    <link rel="stylesheet" href="css/styles.scss">
     <link rel="stylesheet" href="css/mainpage.css">
 </head>
 <body>
@@ -27,25 +28,169 @@
         </div>
       </div>
     <!--Main Page-->
-    <div class="banner">
-        <div class="navbar">
-            <img src="images/logo.png" class="logo">
-            <h2>GravGift</h2>
-            <ul>
-                <li><a href="#">Početna</a></li>
-                <li><a href="#">O nama</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Naruči</a></li>
-            </ul>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="images/logo.png" width="50px" height="50px">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Početna</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">O nama</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Kontakt</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Proizvodi</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#order" class="nav__link">Naruči</a>
+                    </li>
+                </ul>
+
+                <div class="nav__dark">
+                    <!-- Theme change button -->
+                    <span class="change-theme-name">Dark mode</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+
+                <i class="ri-close-line nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home" id="home">
+            <img src="images/background.jpg" alt="" class="home__img">
+
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__data-subtitle">GravGift</span>
+                    <h1 class="home__data-title">MJESTO GDJE SNOVI POSTAJU STVARNOST </h1>
+                    <a href="#" class="button">Saznaj više</a>
+
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.facebook.com/bhfuturesfoundation/" target="_blank" class="home__social-link">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/bhfuturesfoundation/?hl=en" target="_blank" class="home__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <h2 class="section__title about__title">O nama </h2>
+                    <p class="about__description">Cilj projekta je popularizacija programiranja kod učenika osnovnih škola, razvijanje takmičarskog duha, 
+                        druženje, razmjena iskustava i upoznavanja novih tehnika programiranja. U svjetlu obrazovanja svaki učenik može pokazati sklonosti
+                         ka određenom predmetu koji izučava. Učenicima koji pokazuju sklonosti ka predmetu informatika, daje se prilika da pokažu svoje
+                          sposobnosti u programiranju. Tokom priprema u redovnoj nastavi učenici će imati priliku da se kroz zimsku školu 
+                          programiranja pripreme za predstojeća 
+                           takmičenja a kroz ljetnu školu programiranja za izbor odgovarajućeg smjera u sljedećem nivou obrazovanja . 
+                        Takmičenje je ujedno prilika da se motiviraju učenici da se više bave programiranjem i razmjenjuju međusobna iskustva.
+                    </p>
+                    <a href="#" class="button">Saznaj više</a>
+                </div>
+
+                <div class="about__img">
+                    <div class="about__img-overlay">
+                        <img src="images/lase.jpg" alt="" class="about__img-one">
+                    </div>
+
+                    <div class="about__img-overlay">
+                        <img src="images/lasercuting.jpeg" alt="" class="about__img-two">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--==================== PRODUCTS ====================-->
+        <section class="program section" id="program">
+            <h2 class="section__title">Proizvodi</h2>
+            
+            <div class="program__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="program__card swiper-slide">
+                        <img src="images/prod1.jpg" alt="" class="program__img">
+                        <div class="program__data">
+                            <h2 class="program__title">Edukacija</h2>
+                        </div>
+                    </div>
+                    <div class="program__card swiper-slide">
+                        <img src="images/prod2.jpg" alt="" class="program__img">
+                        <div class="program__data">
+                            <h2 class="program__title">Motivacija</h2>
+                        </div>
+                    </div>
+                    <div class="program__card swiper-slide">
+                        <img src="images/prod3.jpg" alt="" class="program__img">
+                        <div class="program__data">
+                            <h2 class="program__title">Kompetencija</h2>
+                        </div>
+                    </div>
+                    <div class="program__card swiper-slide">
+                        <img src="images/prod4.jpg" alt="" class="program__img">
+                        <div class="program__data">
+                            <h2 class="program__title">Kompetencija</h2>
+                        </div>
+                    </div>
+                    <div class="program__card swiper-slide">
+                        <img src="images/prod5.jpg" alt="" class="program__img">
+                        <div class="program__data">
+                            <h2 class="program__title">Kompetencija</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!--========================== FOOTER ==============================-->
+    <div class="footer">
+        <div class="footer-row">
+        <h3>Gdje se nalazimo?</h3>
+        <p>Dobrinja <br> 71000 Sarajevo <br> Bosna i Hercegovina <br> <br> <br> </p>
+        <h3>Kontakt</h3>
+        <p>info@web4teens.ba <br> +387 00 000 000 <br> +387 11 111 111 <br> <br> <br></p>
+        <h3>Web4teens</h3>
+        <a href="#" class="navs">O nama <br></a>
+        <a href="#" class="navs">Blog <br></a>
+        <a href="#" class="navs">FAQ <br></a>
+        <a href="#" class="navs">Postani član <br></a>
+
         </div>
-        <div class="content">
-            <h1>MJESTO GDJE SNOVI POSTAJU STVARNOST</h1>
-            <p>neki tekst koji ja ne ynam kako da formulisem nemam pojma ni sta da pisem</p>
+        <div class="footer-row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11513.454776627848!2d18.3444160898102!3d43.82755636584954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c99405043ad1%3A0x4701001374fd0eca!2sDobrinja%2C%20Sarajevo!5e0!3m2!1sen!2sba!4v1635019976015!5m2!1sen!2sba" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-        <button type="button"><span></span>REGISTRUJ SE</button>
-        <button type="button"><span></span>PRIJAVI SE</button>
+        
     </div>
-</body>
+    <div class="footer__rights">
+        <p>&#169; 2021 Web4Teens. All rights reserved</p>
+    </div>
+    
+
+     <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
 <!-- Script for end of loading animation-->
 <script src="js/loadscreen.js"></script>
+<script src="js/js/main.js"></script>
+<script src="js/js/scrollreveal.min.js"></script>
+<script src="js/js/swiper-bundle.min.js"></script>
 </html>
